@@ -14,4 +14,11 @@ public class StrukPrinter {
         System.out.println("-----------------------------------------");
         System.out.println("Total belanja : " + Buku.formatRupiah(keranjang.hitungTotal()));
     }
+
+    public static void cetakPembayaran(int totalBelanja, MetodeBayar[] pilihan) {
+        System.out.println("-------------- PEMBAYARAN ---------------");
+        for (MetodeBayar metode : pilihan) {
+            System.out.printf("%-20s : %s%n", metode.nama(), Buku.formatRupiah(metode.totalBayar(totalBelanja)));
+        }
+    }
 }

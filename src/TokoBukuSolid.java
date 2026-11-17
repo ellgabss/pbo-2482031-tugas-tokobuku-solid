@@ -14,9 +14,13 @@ public class TokoBukuSolid {
         Keranjang kedua = new Keranjang();
         kedua.tambah(digital);
 
+        MetodeBayar[] pilihan = { new Tunai(), new Transfer(), new EWallet() };
+
         StrukPrinter.cetakKeranjang("KERANJANG PERTAMA", pertama);
+        StrukPrinter.cetakPembayaran(pertama.hitungTotal(), pilihan);
         System.out.println();
         StrukPrinter.cetakKeranjang("KERANJANG KEDUA", kedua);
+        StrukPrinter.cetakPembayaran(kedua.hitungTotal(), pilihan);
     }
 }
 
