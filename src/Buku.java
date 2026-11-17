@@ -26,13 +26,6 @@ public abstract class Buku {
 
     public abstract String keterangan();
 
-    public void tampilkanInfo() {
-        System.out.println(judul + " (" + penulis + ")");
-        System.out.println("  Harga       : " + formatRupiah(harga));
-        System.out.println("  Keterangan  : " + keterangan());
-        System.out.println("  Harga akhir : " + formatRupiah(hargaAkhir()));
-    }
-
     protected static String formatRupiah(int jumlah) {
         return "Rp" + String.format("%,d", jumlah).replace(',', '.');
     }
